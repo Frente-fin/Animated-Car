@@ -1,3 +1,68 @@
 body {
+  -webkit-animation: GoBackground 10s linear infinite;
+  animation: GoBackground 10s linear infinite;
   background: #000 url(../img/bg.jpg) repeat-x 0 0;
   height: 100%; }
+
+#container {
+  margin: 270px;
+  width: 1000px;
+  overflow: hidden; }
+
+#car-body {
+  background: url(../img/body.png) no-repeat;
+  width: 490px;
+  height: 170px;
+  margin: auto; }
+
+#wheel-front {
+  -webkit-animation: GoWheel 5s linear 0s infinite;
+  animation: GoWheel 5s linear 0s infinite;
+  background: url(../img/wheel.png) no-repeat;
+  float: left;
+  height: 80px;
+  width: 80px;
+  margin-left: 279px;
+  margin-top: -75px; }
+
+#wheel-back {
+  -webkit-animation: GoWheel 5s linear 0s infinite;
+  animation: GoWheel 5s linear 0s infinite;
+  background: url(../img/wheel.png) no-repeat;
+  float: right;
+  height: 80px;
+  width: 80px;
+  margin-right: 304px;
+  margin-top: -75px; }
+
+@-webkit-keyframes GoWheel {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+
+@keyframes GoWheel {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+
+@-webkit-keyframes GoBackground {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 1000px 0px; } }
+
+@keyframes GoBackground {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 1000px 0px; } }
+
+.pause {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important; }
